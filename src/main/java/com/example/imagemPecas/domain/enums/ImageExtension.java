@@ -1,5 +1,6 @@
 package com.example.imagemPecas.domain.enums;
 
+import lombok.Getter;
 import org.springframework.http.MediaType;
 
 import java.lang.reflect.Array;
@@ -10,9 +11,11 @@ public enum ImageExtension {
     JPG(MediaType.IMAGE_JPEG),
     GIF(MediaType.IMAGE_GIF);
 
+    @Getter
     private final MediaType mediaType;
 
     ImageExtension(MediaType mediaType){
+
         this.mediaType = mediaType;
     }
 
