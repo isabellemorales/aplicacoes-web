@@ -1,16 +1,13 @@
 package com.example.imagemPecas.domain.entity;
-
 import com.example.imagemPecas.domain.enums.ImageExtension;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.extern.java.Log;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -40,10 +37,9 @@ public class Image {
     @Lob
     private byte[] file;
 
-
-
     public String getFileName(){
-
         return getName().concat("").concat(getExtension().name());
     }
 }
+
+
